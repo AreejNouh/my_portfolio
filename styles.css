@@ -1,0 +1,171 @@
+:root {
+    --primary-color: #D1884F;
+    --secondary-color: #008AAA;
+    --tertiary-color: #3BBADB;
+}
+body {
+    margin: 0;
+    padding-top: 4%;
+    padding-bottom: 2%;
+    padding-left: 5%;
+    padding-right: 5%;
+    font-family: 'Poppins', sans-serif;
+}
+header {
+    color: black;
+    display: flex;
+    justify-content: flex-end; 
+    align-items: center;
+    padding: 10px;
+}
+nav {
+    display: flex;
+    align-items: center;
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+nav ul li {
+    display: inline;
+    margin-right: 30px;
+}
+nav ul li a {
+    text-decoration: none;
+    color: black; 
+}
+nav ul li a i {
+    width: 20px;
+    height: 20px; 
+    padding-right: 4px; 
+}
+nav ul li a.selected {
+    color: var(--primary-color);
+    border-radius: 5px;
+}
+
+.main-container {
+    flex-wrap: wrap;
+    padding-top: 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.text-section {
+    flex: 1; 
+}
+.text-section h1 {
+    font-weight: bold;
+    font-size: 47px;
+    color: var(--secondary-color);
+
+}
+.text-section h2 {
+    color: var(--tertiary-color);
+    font-size: 20px;
+}
+.job-title-text {
+    color: var(--primary-color);
+}
+.bottom-buttons{
+    margin-top: 50px;
+}
+.hire-me-button {
+    background-color: var(--secondary-color);
+    color: white;
+    font-size: 20px;
+    font-weight: normal;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    border-radius: 5px;
+    border-width: 2px;
+    border: 2px solid var(--secondary-color);
+    cursor: pointer;
+    box-shadow: 0px 4px 4px rgba(59, 186, 219, 0.4);
+    margin: 10px;
+}
+.see-project-button{
+    margin: 10px;
+    color: var(--secondary-color);
+    background-color: white;
+    font-size: 20px;
+    font-weight: normal;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 5px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    cursor: pointer;
+    box-shadow: 0px 2px 2px rgba(59, 186, 219, 0.4);
+    border: 2px solid var(--secondary-color);
+}
+.photo-section {
+    flex-direction: row-reverse;
+    flex: 1; 
+    display: flex; 
+    padding: 20px; 
+}
+.photo-div{
+    position: relative;
+    width: 65%;
+    margin: 10%;
+    margin-right: 0px;
+    height: 100%;
+}
+.my-photo-background {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 94%;
+    background-color: rgba(59, 186, 219, 0.65); 
+    border-bottom-left-radius: 48%;
+    border-bottom-right-radius:48%;
+    z-index: -1;
+    transform: rotate(-2deg);
+}
+.photo-section img {
+    justify-self: end;
+    border-bottom-left-radius: 48%;
+    width: 96%;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    object-fit: cover;
+}
+
+@media (max-width: 768px) {
+    header{
+        justify-content: flex-start;
+    }
+    nav ul li {
+        margin-right: 20px;
+    }
+    nav ul li a{
+        font-size: 12px;
+    }
+    .text-section h2{
+        font-size: 14px;
+    }
+    .text-section h1{
+        font-size: 22px;
+    }
+    .text-section p{
+        font-size: 14px;
+    }
+    .photo-section {
+        padding: 0px;
+    }
+    .photo-div{
+        height: auto;
+        max-height: 70%;
+        margin-top: 30%;
+        padding: 0px;
+        width: 100%;
+
+    }
+}
